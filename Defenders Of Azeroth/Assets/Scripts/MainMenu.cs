@@ -11,11 +11,18 @@ public class MainMenu : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-
+        if (SceneManager.GetActiveScene().name == "Game" && Input.GetKey("escape")) { 
+            change_Scene("MainMenu");
+        }
     }
+
     public void change_Scene(string sceneName) {
         SceneManager.LoadScene(sceneName);
     }
 
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }
 
