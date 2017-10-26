@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Defenders Of Azeroth", "Defenders Of Azeroth.csproj", "{6C6994FB-0099-89AA-D7F0-F46704402B65}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Defenders Of Azeroth.Editor", "Defenders Of Azeroth.Editor.csproj", "{0AF6185F-DBE8-CF05-D249-EC41122F0FBC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{6C6994FB-0099-89AA-D7F0-F46704402B65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C6994FB-0099-89AA-D7F0-F46704402B65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C6994FB-0099-89AA-D7F0-F46704402B65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AF6185F-DBE8-CF05-D249-EC41122F0FBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AF6185F-DBE8-CF05-D249-EC41122F0FBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AF6185F-DBE8-CF05-D249-EC41122F0FBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AF6185F-DBE8-CF05-D249-EC41122F0FBC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
