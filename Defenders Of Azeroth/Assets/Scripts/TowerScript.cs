@@ -15,9 +15,7 @@ public class TowerScript : MonoBehaviour {
 	void Update () {
         if (Input.GetMouseButtonDown(1))
         {
-            // TODO add rotation depending on targeted enemy
             Rigidbody2D bullet = Instantiate(bulletRigidbody, transform.position, Quaternion.identity) as Rigidbody2D;
-            bullet.velocity = new Vector3(100, 0, 0);
 
             Vector3 cursorInWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3 direction = cursorInWorldPos - transform.position;
