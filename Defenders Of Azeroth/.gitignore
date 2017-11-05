@@ -1,2 +1,11 @@
 .vs/
 Temp/
+Library/metadata
+Library/ShaderCache
+Library/assetDatabase3
+Library/ShaderCache.db
+Library/*.log
+Library/CurrentLayout.dwlt
+Library/*.txt
+Library/EditorInstance.json
+Library/expandedItems
