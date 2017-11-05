@@ -48,6 +48,9 @@ TagManager:
   - name: Enemy
     uniqueID: 1912908713
     locked: 0
+  - name: SpawnPoints
+    uniqueID: 2548461515
+    locked: 0
   - name: Bullets
     uniqueID: 3044019523
     locked: 0

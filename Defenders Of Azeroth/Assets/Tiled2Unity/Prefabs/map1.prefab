@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33701338527245786}
   - component: {fileID: 23307052062384014}
   - component: {fileID: 114275950787162982}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: summer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,9 +38,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4947585475733890}
   - component: {fileID: 114041667532537546}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Road Mid
-  m_TagString: Untagged
+  m_TagString: NoBulletCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 68522085176250834}
   - component: {fileID: 68142821721864016}
   - component: {fileID: 60308622991027686}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4755267966035624}
   - component: {fileID: 60258999861807018}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 33642473434930476}
   - component: {fileID: 23118152570078050}
   - component: {fileID: 114075784184436324}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: summer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,9 +163,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4151416555880132}
   - component: {fileID: 114475159175544436}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Road 2
-  m_TagString: Untagged
+  m_TagString: NoBulletCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -179,9 +179,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4525823167659870}
   - component: {fileID: 114271318765670952}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Grass v2
-  m_TagString: Untagged
+  m_TagString: NoBulletCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -195,9 +195,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4389514876151192}
   - component: {fileID: 114127059608211674}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Trees Top
-  m_TagString: Untagged
+  m_TagString: NoBulletCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 33311461392053850}
   - component: {fileID: 23672917856873578}
   - component: {fileID: 114152036796048124}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: summer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,9 +229,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4485512131992726}
   - component: {fileID: 114148012640741498}
-  m_Layer: 0
+  - component: {fileID: 114035476409439910}
+  m_Layer: 1
   m_Name: map1
-  m_TagString: Untagged
+  m_TagString: NoBulletCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -245,7 +246,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4894768777965706}
   - component: {fileID: 60034997302912970}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,7 +264,7 @@ GameObject:
   - component: {fileID: 33766881692255578}
   - component: {fileID: 23372774262661572}
   - component: {fileID: 114027429083633572}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: summer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,7 +282,7 @@ GameObject:
   - component: {fileID: 33623568030766214}
   - component: {fileID: 23636318821550792}
   - component: {fileID: 114774916654723036}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: summer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -312,7 +313,7 @@ GameObject:
   - component: {fileID: 68716480204108756}
   - component: {fileID: 68785243069646466}
   - component: {fileID: 60878302203706340}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -330,7 +331,7 @@ GameObject:
   - component: {fileID: 33314536829964628}
   - component: {fileID: 23298491992236606}
   - component: {fileID: 114303425332341040}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: summer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -346,9 +347,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4847376945287684}
   - component: {fileID: 114512878331504340}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Road 1
-  m_TagString: Untagged
+  m_TagString: NoBulletCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -362,9 +363,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4693076812671318}
   - component: {fileID: 114397240421991750}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Base floor v2
-  m_TagString: Untagged
+  m_TagString: NoBulletCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -378,9 +379,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4526774474785852}
   - component: {fileID: 114567621199273994}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Water Mid v2
-  m_TagString: Untagged
+  m_TagString: NoBulletCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -402,9 +403,9 @@ GameObject:
   - component: {fileID: 68799997753431572}
   - component: {fileID: 68591233711087188}
   - component: {fileID: 60659431629646848}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Collision
-  m_TagString: Untagged
+  m_TagString: NoBulletCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -420,9 +421,9 @@ GameObject:
   - component: {fileID: 33293293373294436}
   - component: {fileID: 23999662936485052}
   - component: {fileID: 114668526936637344}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: summer
-  m_TagString: Untagged
+  m_TagString: NoBulletCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -496,7 +497,7 @@ GameObject:
   - component: {fileID: 68781648865630032}
   - component: {fileID: 68765958527957100}
   - component: {fileID: 68344515407291296}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -559,7 +560,7 @@ GameObject:
   - component: {fileID: 68247372952082294}
   - component: {fileID: 68481392873119660}
   - component: {fileID: 60503699641177130}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -681,7 +682,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1372676136833460}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 18.012207, y: 469.7865, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4525823167659870}
@@ -5300,6 +5301,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1874989c5e2da094ea00112c6a895694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114035476409439910
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1372676136833460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d461ae2d363aa1649a9a1bf4de7699e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1383836197263940, guid: d10ca9d14d252d64cb191106f3e032ee,
+    type: 2}
 --- !u!114 &114041667532537546
 MonoBehaviour:
   m_ObjectHideFlags: 1

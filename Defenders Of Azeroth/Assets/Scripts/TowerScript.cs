@@ -6,9 +6,14 @@ public class TowerScript : MonoBehaviour {
     public Rigidbody2D bulletRigidbody;
     public GameObject healthBar;
 
+    private SpawnPointScript spawnPoint = null;
+
+    private float timeLeft;
+    private bool timerRunning = false;
+
 	// Use this for initialization
 	void Start () {
-        healthBar.transform.SetParent(transform, false);
+        //healthBar.transform.SetParent(transform, false);
     }
 	
 	// Update is called once per frame
@@ -22,5 +27,26 @@ public class TowerScript : MonoBehaviour {
             direction.Normalize();
             bullet.velocity = direction * 500;
         }
+
+        if (timerRunning)
+        {
+            timeLeft -= Time.deltaTime;
+            if (timeLeft <= 0)
+            {
+                timerRunning = false;
+                spawnPoint.NotifyTowerDestroy();
+            }
+        }
+    }
+
+    public void SetSpawnPoint(SpawnPointScript spawn)
+    {
+        spawnPoint = spawn;
+    }
+
+    public void SetTimeout(float time)
+    {
+        timeLeft = time;
+        timerRunning = true;
     }
 }
