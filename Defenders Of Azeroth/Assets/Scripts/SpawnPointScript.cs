@@ -7,9 +7,12 @@ public class SpawnPointScript : MonoBehaviour {
     private float initialOpacity;
     private float highlightedOpacity = 0.5f;
 
+    private string towerType;
     private GameObject tower = null;
 
+
     public GameObject testPrefab;
+
 
     // TODO this should be the menu script
     //public GameObject menu;
@@ -21,8 +24,8 @@ public class SpawnPointScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+
+    }
 
     private void OnMouseEnter()
     {
@@ -55,7 +58,11 @@ public class SpawnPointScript : MonoBehaviour {
         if (!tower)
         {
             // TODO get tower from the menu
-            GameObject towerPrefab = testPrefab;
+            GameObject map = GameObject.Find("Main Camera");
+            UnitsButton gameScriptController = map.GetComponent<UnitsButton>();
+            tower = gameScriptController.unitPrefab;
+
+            GameObject towerPrefab = tower;
 
             OnMouseExit();
             tower = Instantiate(towerPrefab, transform.position, Quaternion.identity) as GameObject;

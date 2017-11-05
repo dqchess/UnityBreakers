@@ -4,8 +4,18 @@ using UnityEngine;
 
 public class UnitsButton : MonoBehaviour {
 
-    [SerializeField]
-    private GameObject unitPrefab;
+    
+    public GameObject unitPrefab;
+
+    private void Update()
+    {
+       
+    }
+
+    public void SetTowerPrefab(GameObject tower)
+    {
+        this.unitPrefab = tower;
+    }
 
     public GameObject UnitPrefab
     {

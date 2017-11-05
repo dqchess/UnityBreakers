@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameScript : MonoBehaviour {
+public class GameScript : MonoBehaviour { 
+
     public GameObject towerPrefab;
 
-    public UnitsButton ClickedBtn { get; private set; } 
-
+    public void SetTowerPrefab(GameObject tower)
+    {
+        this.towerPrefab = tower;
+    }
 
 	// Use this for initialization
 	void Start () {
