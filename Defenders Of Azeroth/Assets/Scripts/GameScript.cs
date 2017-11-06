@@ -12,9 +12,16 @@ public class GameScript : MonoBehaviour {
     }
 
     public GameObject enemy1Prefab;
+    public GameObject enemy2Prefab;
+    public GameObject enemy3Prefab;
+
     public Transform enemySpawnPointUp;
     public Transform enemySpawnPointDown;
     public Transform enemyTarget;
+
+    private GameObject[] enemyPrefabs;
+
+    private List<GameObject> spawnedEnemies;
 
     float elapsedTime = 0f;
     float targetTime = 5f;
@@ -23,6 +30,10 @@ public class GameScript : MonoBehaviour {
     
 	// Use this for initialization
 	void Start () {
+        enemyPrefabs = new GameObject[3];
+        enemyPrefabs[0] = enemy1Prefab;
+        enemyPrefabs[1] = enemy2Prefab;
+        enemyPrefabs[2] = enemy3Prefab;
     }
 	
 	// Update is called once per frame
@@ -46,17 +57,25 @@ public class GameScript : MonoBehaviour {
 
                 int numEnemiesToSpawn = 1 + (int)(Random.value * 100) % 2;
                 bool spawnUp = ( (int)(Random.value * 100) % 2) == 1;
+                int enemyToSpawn = ((int)(Random.value * 100) % 3);
 
                 Transform spawnLocation = (spawnUp) ? enemySpawnPointUp : enemySpawnPointDown;
 
                 for (int i = 0; i < numEnemiesToSpawn; i++)
                 {
-                    GameObject enemy = Instantiate(enemy1Prefab, spawnLocation.position - new Vector3(30 * i, 0, 0), enemy1Prefab.GetComponent<Transform>().rotation);
+                    GameObject enemy = Instantiate(enemyPrefabs[enemyToSpawn], spawnLocation.position - new Vector3(30 * i, 0, 0), enemy1Prefab.GetComponent<Transform>().rotation);
                     enemy.GetComponent<AIPath>().target = enemyTarget;
                     enemy.GetComponent<AIPath>().SearchPath();
+
+                    spawnedEnemies.Add(enemy);
                 }
             }
         }
     }
 
+    public GameObject GetNearestEnemy(Vector3 position)
+    {
+        // TODO
+        return null;
+    }
 }

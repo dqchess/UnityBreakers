@@ -69,7 +69,7 @@ public class SpawnPointScript : MonoBehaviour {
 
             TowerScript script = tower.GetComponentInChildren<TowerScript>();
             script.SetSpawnPoint(this);
-            script.SetTimeout(3f);
+            script.SetTimeout(8f);
         }
     }
 
