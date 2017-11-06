@@ -21,7 +21,7 @@ public class GameScript : MonoBehaviour {
 
     private GameObject[] enemyPrefabs;
 
-    private List<GameObject> spawnedEnemies;
+    private List<GameObject> spawnedEnemies = new List<GameObject>();
 
     float elapsedTime = 0f;
     float targetTime = 5f;

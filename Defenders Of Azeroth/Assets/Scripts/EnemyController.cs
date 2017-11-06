@@ -9,6 +9,8 @@ public class EnemyController : MonoBehaviour {
     private Animator anim;
     private Vector3 animatorMovement;
 
+    public float enemyHitDamage = 5f;
+
     private Quaternion myRotation = Quaternion.identity;
 
     void Start()
@@ -81,5 +83,10 @@ public class EnemyController : MonoBehaviour {
     private void LateUpdate()
     {
         transform.rotation = myRotation;
+    }
+
+    public float GetHitDamage()
+    {
+        return enemyHitDamage;
     }
 }
