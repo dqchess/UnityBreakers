@@ -9,6 +9,7 @@ public class EnemyController : MonoBehaviour {
     private Animator anim;
     private Vector3 animatorMovement;
 
+    private Quaternion myRotation = Quaternion.identity;
 
     void Start()
     {
@@ -23,12 +24,18 @@ public class EnemyController : MonoBehaviour {
 
         // TODO change this with mainBase position after paths are done
         // var baseDirection = GameObject.Find("mainBase").transform.position;
-        Vector3 cursorInWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 direction = cursorInWorldPos - transform.position;
+        //Vector3 cursorInWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 direction = transform.parent.transform.rotation * Vector3.forward;
+
         direction.Normalize();
-        GetComponent<Rigidbody2D>().velocity = direction * 50;
+        //GetComponent<Rigidbody2D>().velocity = direction * 50;
 
         Animate(direction);
+    }
+
+    void Rotate(float angles)
+    {
+        myRotation = Quaternion.Euler(new Vector3(0, angles, 0));
     }
 
     void Animate(Vector3 direction)
@@ -41,8 +48,8 @@ public class EnemyController : MonoBehaviour {
             anim.SetFloat("MoveX", +2);
             if (animatorMovement != Vector3.right)
             {
-                if (animatorMovement == Vector3.left)
-                    transform.Rotate(0, 180, 0);
+                //if (animatorMovement == Vector3.left)
+                  //  Rotate(180);
                 animatorMovement = Vector3.right;
             }
         }
@@ -53,7 +60,7 @@ public class EnemyController : MonoBehaviour {
             anim.SetFloat("MoveX", -2);
             if (animatorMovement != Vector3.left)
             {
-                transform.Rotate(0, 180, 0);
+                //Rotate(180);
                 animatorMovement = Vector3.left;
             }
         }
@@ -69,5 +76,10 @@ public class EnemyController : MonoBehaviour {
             anim.SetFloat("MoveX", 0);
             anim.SetFloat("MoveY", +2);
         }
+    }
+
+    private void LateUpdate()
+    {
+        transform.rotation = myRotation;
     }
 }
