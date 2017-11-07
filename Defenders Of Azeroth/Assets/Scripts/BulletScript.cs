@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
+    public float damageAmount;
 
     // Use this for initialization
     void Start()
@@ -29,5 +30,16 @@ public class BulletScript : MonoBehaviour
     void Update()
     {
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        EnemyController enemy = collision.gameObject.GetComponentInChildren<EnemyController>();
+
+        if (!enemy)
+            return;
+
+        enemy.InflictDamage(damageAmount);
+        Destroy(gameObject);
     }
 }
