@@ -79,9 +79,9 @@ public class GameScript : MonoBehaviour {
         Destroy(enemy);
     }
 
-    public GameObject GetNearestEnemy(Vector3 position)
+    public GameObject GetNearestEnemy(Vector3 position, float maxRange)
     {
-        float distance = 9999999f;
+        float distance = maxRange;
         GameObject closest = null;
 
         foreach (GameObject enemy in spawnedEnemies) {
