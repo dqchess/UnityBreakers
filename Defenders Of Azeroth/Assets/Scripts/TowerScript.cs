@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TowerScript : MonoBehaviour {
     public Rigidbody2D bulletRigidbody;
@@ -8,7 +9,8 @@ public class TowerScript : MonoBehaviour {
 
     private SpawnPointScript spawnPoint = null;
 
-    private float timeLeft;
+    private float timeLeft = 0f;
+    private float timeout = 0f;
     private bool timerRunning = false;
 
 	// Use this for initialization
@@ -33,9 +35,13 @@ public class TowerScript : MonoBehaviour {
             timeLeft -= Time.deltaTime;
             if (timeLeft <= 0)
             {
+                timeLeft = 0;
                 timerRunning = false;
                 spawnPoint.NotifyTowerDestroy();
             }
+
+            GetComponentInChildren<Slider>().value = timeLeft * 100 / timeout;
+            GetComponentInChildren<Text>().text = ((int)timeLeft).ToString() + "s";
         }
     }
 
@@ -46,6 +52,7 @@ public class TowerScript : MonoBehaviour {
 
     public void SetTimeout(float time)
     {
+        timeout = time;
         timeLeft = time;
         timerRunning = true;
     }
