@@ -13,6 +13,11 @@ public class TowerScript : MonoBehaviour {
     private float timeout = 0f;
     private bool timerRunning = false;
     public float bulletDamage = 10f;
+    private float bulletRange = 10f;
+    private float fireFrequencySeconds = 1f;
+    
+
+    private float fireTimerElapsed = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -21,15 +26,25 @@ public class TowerScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetMouseButtonDown(1))
-        {
-            Rigidbody2D bullet = Instantiate(bulletRigidbody, transform.position, Quaternion.identity) as Rigidbody2D;
-            bullet.gameObject.GetComponentInChildren<BulletScript>().damageAmount = bulletDamage;
 
-            Vector3 cursorInWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector3 direction = cursorInWorldPos - transform.position;
-            direction.Normalize();
-            bullet.velocity = direction * 500;
+        // TODO should fire once every 1 second -> the frequency could be increased as an update
+        fireTimerElapsed += Time.deltaTime;
+
+        if (fireTimerElapsed >= fireFrequencySeconds)
+        {
+            fireTimerElapsed = 0f;
+
+            GameObject nearsestEnemy = GameObject.Find("map1").GetComponent<GameScript>().GetNearestEnemy(transform.position);
+            if (nearsestEnemy)
+            {
+                Rigidbody2D bullet = Instantiate(bulletRigidbody, transform.position, Quaternion.identity) as Rigidbody2D;
+                bullet.gameObject.GetComponentInChildren<BulletScript>().damageAmount = bulletDamage;
+
+                //Vector3 cursorInWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                Vector3 direction = nearsestEnemy.GetComponent<Transform>().position - transform.position;
+                direction.Normalize();
+                bullet.velocity = direction * 500;
+            }
         }
 
         if (timerRunning)

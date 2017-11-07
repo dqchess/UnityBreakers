@@ -73,9 +73,26 @@ public class GameScript : MonoBehaviour {
         }
     }
 
+    public void NotifyEnemyDestroy(GameObject enemy)
+    {
+        spawnedEnemies.Remove(enemy);
+        Destroy(enemy);
+    }
+
     public GameObject GetNearestEnemy(Vector3 position)
     {
-        // TODO
-        return null;
+        float distance = 9999999f;
+        GameObject closest = null;
+
+        foreach (GameObject enemy in spawnedEnemies) {
+            float temp = Vector3.Distance(enemy.GetComponent<Transform>().position, position);
+            if (temp < distance)
+            {
+                distance = temp;
+                closest = enemy;
+            }
+        }
+
+        return closest;
     }
 }
