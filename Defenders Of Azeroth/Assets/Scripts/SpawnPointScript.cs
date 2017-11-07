@@ -52,6 +52,14 @@ public class SpawnPointScript : MonoBehaviour {
         }
     }
 
+    private void OnMouseOver()
+    {
+        if (!tower)
+        {
+
+        }
+    }
+
     private void OnMouseDown()
     {
         // create an instance of the object saved in the menu object
