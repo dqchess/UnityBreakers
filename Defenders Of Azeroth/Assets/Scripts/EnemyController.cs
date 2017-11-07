@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyController : MonoBehaviour {
 
@@ -9,7 +10,9 @@ public class EnemyController : MonoBehaviour {
     private Animator anim;
     private Vector3 animatorMovement;
 
-    public float enemyHitDamage = 5f;
+    private float enemyHitDamage = 5f;
+    private float enemyMaxHealth = 100f;
+    private float enemyCurrentHealth = 100f;
 
     private Quaternion myRotation = Quaternion.identity;
 
@@ -88,5 +91,33 @@ public class EnemyController : MonoBehaviour {
     public float GetHitDamage()
     {
         return enemyHitDamage;
+    }
+
+    public void InflictDamage(float damage)
+    {
+        enemyCurrentHealth -= damage;
+
+        if (enemyCurrentHealth <= 0)
+        {
+            enemyCurrentHealth = 0;
+
+            // notify the wave generation script that this particular enemy should be destroyed
+            GameObject.Find("map1").GetComponent<GameScript>().NotifyEnemyDestroy(gameObject);
+        }
+
+        GetComponentInChildren<Slider>().value = enemyCurrentHealth * 100 / enemyMaxHealth;
+    }
+
+    // TODO this should be used in GameScript -> wave generation
+    public void SetHealth(float health)
+    {
+        enemyCurrentHealth = health;
+        enemyMaxHealth = health;
+    }
+
+    // TODO this shoud be used in GameScript -> wave generation
+    public void  SetHitDamage(float damage)
+    {
+        enemyHitDamage = damage;
     }
 }

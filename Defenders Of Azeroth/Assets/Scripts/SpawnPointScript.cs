@@ -52,6 +52,14 @@ public class SpawnPointScript : MonoBehaviour {
         }
     }
 
+    private void OnMouseOver()
+    {
+        if (!tower)
+        {
+
+        }
+    }
+
     private void OnMouseDown()
     {
         // create an instance of the object saved in the menu object
@@ -69,7 +77,9 @@ public class SpawnPointScript : MonoBehaviour {
 
             TowerScript script = tower.GetComponentInChildren<TowerScript>();
             script.SetSpawnPoint(this);
-            script.SetTimeout(8f);
+
+            // TODO hardcoded tower timeout ?!
+            script.SetTimeout(20f);
         }
     }
 
