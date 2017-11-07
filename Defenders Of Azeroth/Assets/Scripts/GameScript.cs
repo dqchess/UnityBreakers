@@ -11,6 +11,7 @@ public class GameScript : MonoBehaviour {
         this.towerPrefab = tower;
     }
 
+    public GameObject defenderPrefab;
     public GameObject enemy1Prefab;
     public GameObject enemy2Prefab;
     public GameObject enemy3Prefab;
@@ -21,13 +22,12 @@ public class GameScript : MonoBehaviour {
 
     private GameObject[] enemyPrefabs;
 
+    private List<GameObject> spawnedDefenders = new List<GameObject>();
     private List<GameObject> spawnedEnemies = new List<GameObject>();
 
     float elapsedTime = 0f;
     float targetTime = 5f;
 
-    // wave system relate
-    
 	// Use this for initialization
 	void Start () {
         enemyPrefabs = new GameObject[3];
@@ -38,15 +38,6 @@ public class GameScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //if (input.getmousebuttondown(0))
-        //{
-        //    debug.log("pressed left click.");
-        //    vector3 offset = new vector3(120, -50, 0);
-        //    vector3 mousepos = camera.main.screentoworldpoint(input.mouseposition);
-        //    vector3 towerpos = new vector3(mousepos.x, mousepos.y, 0);
-        //    gameobject tower = (gameobject)instantiate(towerprefab, towerpos, quaternion.identity);
-        //}
-
         // wave system
         {
             elapsedTime += Time.deltaTime;
@@ -76,6 +67,12 @@ public class GameScript : MonoBehaviour {
     public void NotifyEnemyDestroy(GameObject enemy)
     {
         spawnedEnemies.Remove(enemy);
+
+        foreach (GameObject e in spawnedDefenders)
+        {
+            e.GetComponentInChildren<Defender_Controller>().NotifyEnemyDead(enemy);
+        }
+
         Destroy(enemy);
     }
 
@@ -94,5 +91,12 @@ public class GameScript : MonoBehaviour {
         }
 
         return closest;
+    }
+
+    public void SpawnDefender()
+    {
+        Vector3 location = GameObject.Find("mainBase").GetComponent<Transform>().position - new Vector3(120, 0, 0);
+        GameObject defender = Instantiate(defenderPrefab, location, defenderPrefab.GetComponent<Transform>().rotation);
+        spawnedDefenders.Add(defender);
     }
 }

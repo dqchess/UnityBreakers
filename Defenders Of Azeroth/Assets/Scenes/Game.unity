@@ -178,6 +178,12 @@ Prefab:
       value: 
       objectReference: {fileID: 1159982102947988, guid: 12a5f3aa8b09bc147b1e7eeaa78715cd,
         type: 2}
+    - target: {fileID: 114164792141377578, guid: 530df7fd51e5a4349a183cb6e536b727,
+        type: 2}
+      propertyPath: defenderPrefab
+      value: 
+      objectReference: {fileID: 1733620584524720, guid: 4cbe936b0931d304eacc165798194186,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 530df7fd51e5a4349a183cb6e536b727, type: 2}
   m_IsPrefabParent: 0
@@ -557,7 +563,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 611252227}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 728092130}
+        m_MethodName: SpawnDefender
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &611252227
@@ -593,6 +610,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 611252224}
+--- !u!114 &728092130 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114164792141377578, guid: 530df7fd51e5a4349a183cb6e536b727,
+    type: 2}
+  m_PrefabInternal: {fileID: 87914545}
+  m_Script: {fileID: 11500000, guid: d461ae2d363aa1649a9a1bf4de7699e5, type: 3}
 --- !u!1 &801341543
 GameObject:
   m_ObjectHideFlags: 0
@@ -831,8 +854,8 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114577892107113940, guid: 34ec8575199124e4d9cd3f5a28695487,
         type: 2}
-      propertyPath: logPathResults
-      value: 4
+      propertyPath: showNavGraphs
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34ec8575199124e4d9cd3f5a28695487, type: 2}
