@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224210988026594540}
-  m_Layer: 5
+  m_Layer: 1
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 114498017448819096}
   - component: {fileID: 114039362379803358}
   - component: {fileID: 58818428352978480}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Grunt_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224616237709202632}
   - component: {fileID: 114264513259810812}
-  m_Layer: 5
+  m_Layer: 1
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 114611944997424558}
   - component: {fileID: 58274629150849868}
   - component: {fileID: 60178820172991472}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Grunt_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 224932111797832060}
   - component: {fileID: 222456880904356582}
   - component: {fileID: 114751971906171518}
-  m_Layer: 5
+  m_Layer: 1
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 224820487837714850}
   - component: {fileID: 222915480148694092}
   - component: {fileID: 114675962831383728}
-  m_Layer: 5
+  m_Layer: 1
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 223098572448028418}
   - component: {fileID: 114919359802832438}
   - component: {fileID: 114895297265559066}
-  m_Layer: 5
+  m_Layer: 1
   m_Name: EnemyHealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224810056551030480}
-  m_Layer: 5
+  m_Layer: 1
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 224518451451477308}
   - component: {fileID: 222731738201527874}
   - component: {fileID: 114145583953239402}
-  m_Layer: 5
+  m_Layer: 1
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -318,7 +318,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   centerOffset: 1
   rotationIn2D: 0
-  repathRate: 0.5
+  repathRate: 2
   target: {fileID: 0}
   canSearch: 1
   canMove: 1
@@ -444,6 +444,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movespeed: 10
   userDirection: {x: 1, y: 0, z: 0}
+  enemyHitDamage: 5
+  enemyCurrentHealth: 100
 --- !u!114 &114675962831383728
 MonoBehaviour:
   m_ObjectHideFlags: 1

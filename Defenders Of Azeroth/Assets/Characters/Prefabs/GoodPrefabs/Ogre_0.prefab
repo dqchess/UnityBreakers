@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224373089211562304}
-  m_Layer: 5
+  m_Layer: 1
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,7 +35,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224171380946545936}
   - component: {fileID: 114054137724598502}
-  m_Layer: 5
+  m_Layer: 1
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   - component: {fileID: 224942464080683292}
   - component: {fileID: 222851240289584738}
   - component: {fileID: 114218450377769794}
-  m_Layer: 5
+  m_Layer: 1
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   - component: {fileID: 224618358938707672}
   - component: {fileID: 222148490289621496}
   - component: {fileID: 114078371421440864}
-  m_Layer: 5
+  m_Layer: 1
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 223174069688503278}
   - component: {fileID: 114218593026871246}
   - component: {fileID: 114384273467146350}
-  m_Layer: 5
+  m_Layer: 1
   m_Name: EnemyHealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 58613837517526098}
   - component: {fileID: 114747526685399546}
   - component: {fileID: 60353150971632874}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Ogre_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224741069441945762}
-  m_Layer: 5
+  m_Layer: 1
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 224599989588295020}
   - component: {fileID: 222191567266342040}
   - component: {fileID: 114920579118733464}
-  m_Layer: 5
+  m_Layer: 1
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 114908906100002984}
   - component: {fileID: 114709457755706284}
   - component: {fileID: 58470690850998488}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Ogre_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -454,7 +454,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   centerOffset: 1
   rotationIn2D: 0
-  repathRate: 0.5
+  repathRate: 2
   target: {fileID: 0}
   canSearch: 1
   canMove: 1
@@ -477,6 +477,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movespeed: 1
   userDirection: {x: 1, y: 0, z: 0}
+  enemyHitDamage: 5
+  enemyCurrentHealth: 100
 --- !u!114 &114908906100002984
 MonoBehaviour:
   m_ObjectHideFlags: 1

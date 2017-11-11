@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--Tiled2Unity generated xml data-->
 <!--Do not modify by hand-->
-<!--Last exported: 11/11/2017 4:07:50 PM-->
+<!--Last exported: 11/11/2017 9:20:25 PM-->
 <Tiled2Unity version="1.0.13.0">
   <AssignMaterial mesh="map1_mesh_0001" material="summer" />
   <AssignMaterial mesh="map1_mesh_0003" material="summer" />
@@ -788,6 +788,21 @@
       <GameObject name="summer" x="0" y="0" mesh="map1_mesh_0012" sortingLayerName="" sortingOrder="7" opacity="1" />
       <GameObject name="Collision">
         <PolygonCollider2D>
+          <Path>311,-29 122,-32 -1,-32 -1,1 311,1</Path>
+        </PolygonCollider2D>
+        <PolygonCollider2D>
+          <Path>342,-29 342,-63 122,-63 122,-32 311,-29</Path>
+        </PolygonCollider2D>
+        <PolygonCollider2D>
+          <Path>466,-91 463,-94 401,-94 401,-60 466,-60</Path>
+        </PolygonCollider2D>
+        <PolygonCollider2D>
+          <Path>714,-91 714,-125 463,-125 463,-94 466,-91</Path>
+        </PolygonCollider2D>
+        <PolygonCollider2D>
+          <Path>249,-184 249,-218 184,-218 184,-184</Path>
+        </PolygonCollider2D>
+        <PolygonCollider2D>
           <Path>155,-279 124,-248 155,-248</Path>
         </PolygonCollider2D>
         <PolygonCollider2D>
@@ -805,26 +820,44 @@
         <PolygonCollider2D>
           <Path>93,-310 93,-341 0,-341 0,-217</Path>
         </PolygonCollider2D>
+        <PolygonCollider2D>
+          <Path>962,-308 742,-373 711,-373 711,-277 962,-277</Path>
+        </PolygonCollider2D>
+        <PolygonCollider2D>
+          <Path>993,-308 993,-404 742,-404 742,-373 962,-308</Path>
+        </PolygonCollider2D>
+        <PolygonCollider2D>
+          <Path>1241,-525 1241,-559 -1,-559 -1,-525</Path>
+        </PolygonCollider2D>
         <EdgeCollider2D>
-          <Points>93,-33 116,-62 123,-62 124,-30 92,-30 92,-32</Points>
+          <Points>61,-37 91,-38 92,-32</Points>
         </EdgeCollider2D>
         <EdgeCollider2D>
-          <Points>61,-37 91,-38 93,-30 61,-30 62,-37</Points>
+          <Points>30,-37 60,-38 61,-32 62,-37</Points>
         </EdgeCollider2D>
         <EdgeCollider2D>
-          <Points>30,-37 60,-38 62,-30 30,-30 31,-37</Points>
+          <Points>0,-32 0,-36</Points>
         </EdgeCollider2D>
         <EdgeCollider2D>
-          <Points>0,-37 30,-37 30,-31 0,-31 0,-36</Points>
+          <Points>31,-37 30,-32 30,-37 0,-37</Points>
         </EdgeCollider2D>
         <EdgeCollider2D>
-          <Points>185,-68 215,-69 217,-61 185,-61 186,-68</Points>
+          <Points>93,-33 116,-62 122,-62</Points>
         </EdgeCollider2D>
         <EdgeCollider2D>
-          <Points>154,-69 186,-70 186,-62 155,-62 155,-69</Points>
+          <Points>185,-68 215,-69 216,-63</Points>
         </EdgeCollider2D>
         <EdgeCollider2D>
-          <Points>123,-69 155,-70 155,-62 124,-62 124,-69</Points>
+          <Points>185,-63 186,-68</Points>
+        </EdgeCollider2D>
+        <EdgeCollider2D>
+          <Points>154,-69 186,-70 186,-63</Points>
+        </EdgeCollider2D>
+        <EdgeCollider2D>
+          <Points>124,-63 124,-69</Points>
+        </EdgeCollider2D>
+        <EdgeCollider2D>
+          <Points>123,-69 155,-70 155,-63 155,-69</Points>
         </EdgeCollider2D>
         <EdgeCollider2D>
           <Points>61,-148 61,-154 93,-153 93,-146 61,-148</Points>
@@ -845,7 +878,7 @@
           <Points>124,-158 145,-186 156,-186 154,-153 124,-154 124,-158</Points>
         </EdgeCollider2D>
         <EdgeCollider2D>
-          <Points>155,-155 153,-185 185,-184 164,-155 155,-155</Points>
+          <Points>185,-184 164,-155 155,-155 153,-185 184,-184</Points>
         </EdgeCollider2D>
         <EdgeCollider2D>
           <Points>92,-162 124,-163 124,-155 93,-155 93,-162</Points>
@@ -860,13 +893,19 @@
           <Points>0,-161 30,-161 30,-155 0,-155 0,-160</Points>
         </EdgeCollider2D>
         <EdgeCollider2D>
-          <Points>186,-179 186,-185 216,-185 216,-178 185,-178</Points>
+          <Points>216,-184 216,-178 185,-178</Points>
         </EdgeCollider2D>
         <EdgeCollider2D>
-          <Points>155,-188 178,-217 185,-217 186,-185 154,-185 154,-187</Points>
+          <Points>186,-179 186,-184</Points>
+        </EdgeCollider2D>
+        <EdgeCollider2D>
+          <Points>184,-185 154,-185 154,-187</Points>
         </EdgeCollider2D>
         <EdgeCollider2D>
           <Points>0,-186 15,-186 0,-217 31,-216 31,-198 17,-185</Points>
+        </EdgeCollider2D>
+        <EdgeCollider2D>
+          <Points>155,-188 178,-217 184,-217</Points>
         </EdgeCollider2D>
         <EdgeCollider2D>
           <Points>93,-196 93,-216 124,-215 124,-195 105,-203 92,-194</Points>
@@ -881,13 +920,13 @@
           <Points>123,-197 124,-216 143,-217 124,-198</Points>
         </EdgeCollider2D>
         <EdgeCollider2D>
-          <Points>186,-220 207,-248 218,-248 216,-215 186,-216 186,-220</Points>
-        </EdgeCollider2D>
-        <EdgeCollider2D>
           <Points>139,-217 124,-216 124,-217</Points>
         </EdgeCollider2D>
         <EdgeCollider2D>
           <Points>138,-217 137,-226 155,-224 155,-247 124,-248</Points>
+        </EdgeCollider2D>
+        <EdgeCollider2D>
+          <Points>216,-218 218,-248 207,-248 186,-220 186,-218</Points>
         </EdgeCollider2D>
         <EdgeCollider2D>
           <Points>155,-229 155,-248 173,-248 155,-229</Points>
@@ -977,25 +1016,46 @@
           <Points>0,-410 31,-411 31,-403 0,-403 0,-410</Points>
         </EdgeCollider2D>
         <EdgeCollider2D>
-          <Points>186,-520 186,-526 216,-526 216,-519 185,-519</Points>
+          <Points>216,-525 216,-519 185,-519</Points>
         </EdgeCollider2D>
         <EdgeCollider2D>
-          <Points>155,-520 155,-526 185,-526 185,-519 154,-519</Points>
+          <Points>185,-525 185,-519 154,-519</Points>
         </EdgeCollider2D>
         <EdgeCollider2D>
-          <Points>124,-520 124,-526 154,-526 154,-519 123,-519</Points>
+          <Points>154,-525 154,-519 123,-519</Points>
         </EdgeCollider2D>
         <EdgeCollider2D>
-          <Points>93,-520 93,-526 123,-526 123,-519 92,-519</Points>
+          <Points>123,-525 123,-519 92,-519</Points>
         </EdgeCollider2D>
         <EdgeCollider2D>
-          <Points>62,-520 62,-526 92,-526 92,-519 61,-519</Points>
+          <Points>92,-525 92,-519 61,-519</Points>
         </EdgeCollider2D>
         <EdgeCollider2D>
-          <Points>31,-520 31,-526 61,-526 61,-519 30,-519</Points>
+          <Points>61,-525 61,-519 30,-519</Points>
         </EdgeCollider2D>
         <EdgeCollider2D>
-          <Points>0,-520 0,-526 30,-526 30,-519 0,-519</Points>
+          <Points>30,-525 30,-519 0,-519</Points>
+        </EdgeCollider2D>
+        <EdgeCollider2D>
+          <Points>186,-520 186,-525</Points>
+        </EdgeCollider2D>
+        <EdgeCollider2D>
+          <Points>155,-520 155,-525</Points>
+        </EdgeCollider2D>
+        <EdgeCollider2D>
+          <Points>124,-520 124,-525</Points>
+        </EdgeCollider2D>
+        <EdgeCollider2D>
+          <Points>93,-520 93,-525</Points>
+        </EdgeCollider2D>
+        <EdgeCollider2D>
+          <Points>62,-520 62,-525</Points>
+        </EdgeCollider2D>
+        <EdgeCollider2D>
+          <Points>31,-520 31,-525</Points>
+        </EdgeCollider2D>
+        <EdgeCollider2D>
+          <Points>0,-520 0,-525</Points>
         </EdgeCollider2D>
       </GameObject>
     </GameObject>
