@@ -323,8 +323,10 @@
     <Compile Include="Assets\Scripts\BulletScript.cs" />
     <Compile Include="Assets\Scripts\Defender_Controller.cs" />
     <Compile Include="Assets\Scripts\EnemyController.cs" />
+    <Compile Include="Assets\Scripts\EntityValue.cs" />
     <Compile Include="Assets\Scripts\GameScript.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\ShopScript.cs" />
     <Compile Include="Assets\Scripts\SpawnPointScript.cs" />
     <Compile Include="Assets\Scripts\TowerScript.cs" />
     <Compile Include="Assets\Scripts\UnitsButton.cs" />
@@ -361,6 +363,7 @@
     <None Include="Assets\AstarPathfindingProject\link.xml" />
     <None Include="Assets\Tiled2Unity\Imported\_ReadMe.txt" />
     <None Include="Assets\Tiled2Unity\Imported\map1.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\menubg.tiled2unity.xml" />
     <None Include="Assets\Tiled2Unity\License.txt" />
     <None Include="Assets\Tiled2Unity\Materials\_ReadMe.txt" />
     <None Include="Assets\Tiled2Unity\Meshes\_ReadMe.txt" />

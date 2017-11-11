@@ -65,21 +65,17 @@ public class SpawnPointScript : MonoBehaviour {
         // create an instance of the object saved in the menu object
         if (!tower)
         {
-            // TODO get tower from the menu
-            GameObject map = GameObject.Find("Main Camera");
-            UnitsButton gameScriptController = map.GetComponent<UnitsButton>();
-            tower = gameScriptController.unitPrefab;
+            GameObject towerPrefab = GameObject.Find("Main Camera").GetComponent<UnitsButton>().unitPrefab;
+            int cost = towerPrefab.GetComponent<EntityValue>().selfValue;
 
-            GameObject towerPrefab = tower;
+            if (GameObject.Find("map1").GetComponent<ShopScript>().DecreaseCurrency(cost)) {
+                OnMouseExit();
+                tower = Instantiate(towerPrefab, transform.position, Quaternion.identity) as GameObject;
 
-            OnMouseExit();
-            tower = Instantiate(towerPrefab, transform.position, Quaternion.identity) as GameObject;
-
-            TowerScript script = tower.GetComponentInChildren<TowerScript>();
-            script.SetSpawnPoint(this);
-
-            // TODO hardcoded tower timeout ?!
-            script.SetTimeout(20f);
+                TowerScript script = tower.GetComponentInChildren<TowerScript>();
+                script.SetSpawnPoint(this);
+                script.SetTimeout(20f);
+            }
         }
     }
 

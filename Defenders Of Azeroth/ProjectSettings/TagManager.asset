@@ -51,6 +51,9 @@ TagManager:
   - name: SpawnPoints
     uniqueID: 2548461515
     locked: 0
+  - name: Tower
+    uniqueID: 3225678525
+    locked: 0
   - name: Bullets
     uniqueID: 3044019523
     locked: 0
