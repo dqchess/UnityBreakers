@@ -22,7 +22,7 @@ MonoBehaviour:
   m_MinSize: {x: 677, y: 450}
   m_MaxSize: {x: 12002, y: 14021}
   vertical: 0
-  controlID: 13500
+  controlID: 1763
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_MinSize: {x: 677, y: 450}
   m_MaxSize: {x: 12002, y: 14021}
   vertical: 1
-  controlID: 13501
+  controlID: 1764
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 677, y: 200}
   m_MaxSize: {x: 12002, y: 4021}
   vertical: 0
-  controlID: 13502
+  controlID: 1765
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -206,9 +206,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 459.1805, y: 20.074915, z: -6.533507}
+    m_Target: {x: 816.7556, y: 136.5942, z: 1.6416051}
     speed: 2
-    m_Value: {x: 459.1805, y: 20.074915, z: -6.533507}
+    m_Value: {x: 816.7556, y: 136.5942, z: 1.6416051}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -235,9 +235,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1150.0223
+    m_Target: 334.57935
     speed: 2
-    m_Value: 1150.0223
+    m_Value: 334.57935
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -302,9 +302,9 @@ MonoBehaviour:
     height: 439
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: a8c5ffff
-    m_LastClickedID: -14936
-    m_ExpandedIDs: 60dafcff96e9ffff00000000c4330000d4330000
+    m_SelectedIDs: f0faffff
+    m_LastClickedID: -1296
+    m_ExpandedIDs: e2faffffe4fafffff0faffff06fbffffa6fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -500,19 +500,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts
+    - Assets/Characters/Prefabs/GoodPrefabs
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Characters/Prefabs/GoodPrefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Self\UnityBreakers\Defenders Of Azeroth
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 27}
-    m_SelectedIDs: 842b0000
-    m_LastClickedID: 11140
-    m_ExpandedIDs: 0000000094280000e2280000ce2a000000ca9a3bffffff7f
+    m_SelectedIDs: 062e0000
+    m_LastClickedID: 11782
+    m_ExpandedIDs: 00000000822800008c290000c4290000262a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -540,7 +540,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000094280000e2280000ce2a000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000822800008c290000c4290000262a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -565,8 +565,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: a8c5ffff
-    m_LastClickedInstanceID: -14936
+    m_SelectedInstanceIDs: f0faffff
+    m_LastClickedInstanceID: -1296
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c03100000a2d000000000000
     m_RenameOverlay:
