@@ -1510,4 +1510,9 @@
    <object id="1" x="0" y="0.333333" width="31" height="30.3333"/>
   </objectgroup>
  </tile>
+ <tile id="356">
+  <objectgroup draworder="index">
+   <object id="5" x="-1.25" y="-1.5" width="33.5" height="33.5"/>
+  </objectgroup>
+ </tile>
 </tileset>

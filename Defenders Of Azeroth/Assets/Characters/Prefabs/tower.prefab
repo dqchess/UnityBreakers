@@ -51,6 +51,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4913607578133372}
+  - component: {fileID: 114150886888961642}
   m_Layer: 0
   m_Name: tower
   m_TagString: Untagged
@@ -245,6 +246,18 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114150886888961642
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1383836197263940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0317885bbe0603344b65879a3852d2a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selfValue: 50
 --- !u!114 &114238427827931574
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -410,6 +423,7 @@ MonoBehaviour:
   bulletRigidbody: {fileID: 50864155442956424, guid: 2dc23a1515d532a4990d99ec8b05c013,
     type: 2}
   healthBar: {fileID: 1291612478883620, guid: 348117c94bedbb049a649bc09ec562ff, type: 2}
+  bulletDamage: 10
 --- !u!114 &114918537954025778
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -468,7 +482,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1250947773
+  m_SortingLayerID: -1069288771
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ce8374cc0422e4b4f9227aeefa1e728e, type: 3}

@@ -74,6 +74,12 @@ public class GameScript : MonoBehaviour {
         }
 
         Destroy(enemy);
+
+        // Add currency and score
+        ShopScript shop = GetComponent<ShopScript>();
+
+        shop.AddScore(enemy.GetComponent<EnemyController>().GetMaxHealth());
+        shop.AddCurrency(enemy.GetComponent<EnemyController>().GetMaxHealth());
     }
 
     public GameObject GetNearestEnemy(Vector3 position, float maxRange)
@@ -95,8 +101,12 @@ public class GameScript : MonoBehaviour {
 
     public void SpawnDefender()
     {
-        Vector3 location = GameObject.Find("mainBase").GetComponent<Transform>().position - new Vector3(120, 0, 0);
-        GameObject defender = Instantiate(defenderPrefab, location, defenderPrefab.GetComponent<Transform>().rotation);
-        spawnedDefenders.Add(defender);
+        int cost = defenderPrefab.GetComponent<EntityValue>().selfValue;
+        if (GetComponent<ShopScript>().DecreaseCurrency(cost))
+        {
+            Vector3 location = GameObject.Find("mainBase").GetComponent<Transform>().position - new Vector3(120, 0, 0);
+            GameObject defender = Instantiate(defenderPrefab, location, defenderPrefab.GetComponent<Transform>().rotation);
+            spawnedDefenders.Add(defender);
+        }
     }
 }

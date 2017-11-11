@@ -120,4 +120,9 @@ public class EnemyController : MonoBehaviour {
     {
         enemyHitDamage = damage;
     }
+
+    public float GetMaxHealth()
+    {
+        return enemyMaxHealth;
+    }
 }

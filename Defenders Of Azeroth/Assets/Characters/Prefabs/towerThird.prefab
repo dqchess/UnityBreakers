@@ -135,6 +135,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4380752398253798}
+  - component: {fileID: 114528176078762914}
   m_Layer: 0
   m_Name: towerThird
   m_TagString: Untagged
@@ -244,6 +245,7 @@ MonoBehaviour:
   bulletRigidbody: {fileID: 50864155442956424, guid: 2dc23a1515d532a4990d99ec8b05c013,
     type: 2}
   healthBar: {fileID: 0}
+  bulletDamage: 10
 --- !u!114 &114468535019352244
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -292,6 +294,18 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114528176078762914
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1814968872349426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0317885bbe0603344b65879a3852d2a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selfValue: 150
 --- !u!114 &114652087849062230
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -447,8 +461,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1746505781
-  m_SortingLayer: 3
+  m_SortingLayerID: -1069288771
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300002, guid: bde27a3abfeed33408de147159c958aa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
