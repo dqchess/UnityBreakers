@@ -12,9 +12,13 @@ public class GameScript : MonoBehaviour {
     }
 
     public GameObject defenderPrefab;
+    public GameObject catapultPrefab;
+
     public GameObject enemy1Prefab;
     public GameObject enemy2Prefab;
     public GameObject enemy3Prefab;
+
+    private List<GameObject> towerList = new List<GameObject>();
 
     public Transform enemySpawnPointUp;
     public Transform enemySpawnPointDown;
@@ -27,6 +31,7 @@ public class GameScript : MonoBehaviour {
 
     float elapsedTime = 0f;
     float targetTime = 5f;
+    public int nrCatapults = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -74,16 +79,17 @@ public class GameScript : MonoBehaviour {
         }
 
         Destroy(enemy);
+
     }
 
-    public GameObject GetNearestEnemy(Vector3 position, float maxRange)
+    public GameObject GetNearestEnemy(Vector3 position, float maxRange, float minRange = 0)
     {
         float distance = maxRange;
         GameObject closest = null;
 
         foreach (GameObject enemy in spawnedEnemies) {
             float temp = Vector3.Distance(enemy.GetComponent<Transform>().position, position);
-            if (temp < distance)
+            if (temp < distance && minRange <= temp)
             {
                 distance = temp;
                 closest = enemy;
@@ -97,6 +103,81 @@ public class GameScript : MonoBehaviour {
     {
         Vector3 location = GameObject.Find("mainBase").GetComponent<Transform>().position - new Vector3(120, 0, 0);
         GameObject defender = Instantiate(defenderPrefab, location, defenderPrefab.GetComponent<Transform>().rotation);
+        defender.GetComponent<AIPath>().speed = 65;
         spawnedDefenders.Add(defender);
     }
+
+    public void SpawnCatapult()
+    {
+        nrCatapults++;
+        if (nrCatapults == 1)
+        {
+            Vector3 location = GameObject.Find("mainBase").GetComponent<Transform>().position - new Vector3(-43, 120,0);
+            //GameObject catapult = Instantiate(catapultPrefab, location, catapultPrefab.GetComponent<Transform>().rotation);
+            GameObject catapult = Instantiate(catapultPrefab, location, Quaternion.identity);
+
+            spawnedDefenders.Add(catapult);
+        }
+        if (nrCatapults == 2)
+        {
+            Vector3 location = GameObject.Find("mainBase").GetComponent<Transform>().position - new Vector3(-43, -120, 0);
+            GameObject catapult = Instantiate(catapultPrefab, location, Quaternion.identity);
+            spawnedDefenders.Add(catapult);
+        }    
+    }
+    public void AddTower(GameObject tower)
+    {
+        towerList.Add(tower);
+    }
+
+    public void RemoveTower(GameObject tower)
+    {
+        towerList.Remove(tower);
+    }
+
+    public void Upgrade_Towers_Damage ()
+    {
+        foreach (var tower in towerList)
+        {
+            tower.GetComponentInChildren<TowerScript>().bulletDamage = tower.GetComponentInChildren<TowerScript>().bulletDamage * 1.5f;
+        }
+    }
+    public void Upgrade_Towers_Range()
+    {
+        foreach (var tower in towerList)
+        {
+            tower.GetComponentInChildren<TowerScript>().bulletRange = tower.GetComponentInChildren<TowerScript>().bulletRange * 1.5f;
+
+        }
+    }
+
+    public void Upgrade_Defender_SpeedDamage()
+    {
+        foreach (var defender in spawnedDefenders)
+        {
+            defender.GetComponent<AIPath>().speed = defender.GetComponent<AIPath>().speed * 1.5f;
+            defender.GetComponentInChildren<Defender_Controller>().damageAmount = defender.GetComponentInChildren<Defender_Controller>().damageAmount * 1.5f;
+        }
+    }
+
+    public void Upgrade_Enemy_ReduceSpeedDamage()
+    {
+        foreach (var enemy in spawnedEnemies)
+        {
+            enemy.GetComponent<AIPath>().speed -= enemy.GetComponent<AIPath>().speed * 0.2f;
+            enemy.GetComponentInChildren<EnemyController>().enemyHitDamage -= enemy.GetComponentInChildren<EnemyController>().enemyHitDamage * 0.2f;
+        }
+    }
+
+    //public void Upgrade_Enemy_SuddenDeath()
+    //{
+    //    var b = spawnedEnemies;
+
+    //    foreach (var enemy in spawnedEnemies)
+    //    {
+    //        enemy.GetComponentInChildren<EnemyController>().InflictDamage(200);
+    //    }
+    //    var a = spawnedEnemies;
+
+    //}
 }

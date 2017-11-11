@@ -74,18 +74,21 @@ public class SpawnPointScript : MonoBehaviour {
 
             OnMouseExit();
             tower = Instantiate(towerPrefab, transform.position, Quaternion.identity) as GameObject;
+            GameObject.Find("map1").GetComponent<GameScript>().AddTower(tower);
 
             TowerScript script = tower.GetComponentInChildren<TowerScript>();
             script.SetSpawnPoint(this);
 
             // TODO hardcoded tower timeout ?!
             script.SetTimeout(20f);
+            
         }
     }
 
     public void NotifyTowerDestroy()
     {
-        Destroy(tower);
+        GameObject.Find("map1").GetComponent<GameScript>().RemoveTower(tower);
+        Destroy(tower);    
         tower = null;
     }
 }

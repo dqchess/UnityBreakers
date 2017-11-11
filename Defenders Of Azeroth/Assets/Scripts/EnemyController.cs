@@ -10,9 +10,9 @@ public class EnemyController : MonoBehaviour {
     private Animator anim;
     private Vector3 animatorMovement;
 
-    private float enemyHitDamage = 5f;
+    public float enemyHitDamage = 5f;
     private float enemyMaxHealth = 100f;
-    private float enemyCurrentHealth = 100f;
+    public float enemyCurrentHealth = 100f;
 
     private Quaternion myRotation = Quaternion.identity;
 

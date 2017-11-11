@@ -13,7 +13,7 @@ public class TowerScript : MonoBehaviour {
     private float timeout = 0f;
     private bool timerRunning = false;
     public float bulletDamage = 10f;
-    private float bulletRange = 300f;
+    public float bulletRange = 300f;
     private float fireFrequencySeconds = 1f;
     
 
