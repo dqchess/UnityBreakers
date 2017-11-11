@@ -71,9 +71,12 @@ public class SpawnPointScript : MonoBehaviour {
             if (GameObject.Find("map1").GetComponent<ShopScript>().DecreaseCurrency(cost)) {
                 OnMouseExit();
                 tower = Instantiate(towerPrefab, transform.position, Quaternion.identity) as GameObject;
+                GameObject.Find("map1").GetComponent<GameScript>().AddTower(tower);
 
                 TowerScript script = tower.GetComponentInChildren<TowerScript>();
                 script.SetSpawnPoint(this);
+
+                // TODO hardcoded tower timeout ?!
                 script.SetTimeout(20f);
             }
         }
@@ -81,7 +84,8 @@ public class SpawnPointScript : MonoBehaviour {
 
     public void NotifyTowerDestroy()
     {
-        Destroy(tower);
+        GameObject.Find("map1").GetComponent<GameScript>().RemoveTower(tower);
+        Destroy(tower);    
         tower = null;
     }
 }

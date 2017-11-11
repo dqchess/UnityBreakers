@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Defender_Controller : MonoBehaviour {
 
-    private static int movespeed = 10;
+    public static int movespeed = 10;
     private Vector3 userDirection = Vector3.left;
 
     private Animator anim;
@@ -12,7 +12,7 @@ public class Defender_Controller : MonoBehaviour {
 
     private float elapsedTime = 0f;
     private float findEnemyTargetTime = 3f;
-    private float damageAmount = 5f;
+    public float damageAmount = 5f;
 
     private Quaternion myRotation = Quaternion.identity;
 
