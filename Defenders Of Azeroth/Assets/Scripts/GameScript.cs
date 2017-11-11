@@ -121,7 +121,7 @@ public class GameScript : MonoBehaviour {
         nrCatapults++;
         if (nrCatapults == 1)
         {
-            Vector3 location = GameObject.Find("mainBase").GetComponent<Transform>().position - new Vector3(-43, 120,0);
+            Vector3 location = GameObject.Find("mainBase").GetComponent<Transform>().position - new Vector3(-35, 120,0);
             //GameObject catapult = Instantiate(catapultPrefab, location, catapultPrefab.GetComponent<Transform>().rotation);
             GameObject catapult = Instantiate(catapultPrefab, location, Quaternion.identity);
 
@@ -129,7 +129,7 @@ public class GameScript : MonoBehaviour {
         }
         if (nrCatapults == 2)
         {
-            Vector3 location = GameObject.Find("mainBase").GetComponent<Transform>().position - new Vector3(-43, -120, 0);
+            Vector3 location = GameObject.Find("mainBase").GetComponent<Transform>().position - new Vector3(-35, -120, 0);
             GameObject catapult = Instantiate(catapultPrefab, location, Quaternion.identity);
             spawnedDefenders.Add(catapult);
         }    
