@@ -87,6 +87,12 @@ public class GameScript : MonoBehaviour {
         shop.AddCurrency(enemy.GetComponent<EnemyController>().GetMaxHealth());
     }
 
+    public void NotifyDefenderDestroy(GameObject defender)
+    {
+        spawnedDefenders.Remove(defender);
+        Destroy(defender);
+    }
+
     public GameObject GetNearestEnemy(Vector3 position, float maxRange, float minRange = 0)
     {
         float distance = maxRange;
@@ -98,6 +104,24 @@ public class GameScript : MonoBehaviour {
             {
                 distance = temp;
                 closest = enemy;
+            }
+        }
+
+        return closest;
+    }
+
+    public GameObject GetNearestDefender(Vector3 position, float maxRange, float minRange = 0)
+    {
+        float distance = maxRange;
+        GameObject closest = null;
+
+        foreach (GameObject defender in spawnedDefenders)
+        {
+            float temp = Vector3.Distance(defender.GetComponent<Transform>().position, position);
+            if (temp < distance && minRange <= temp)
+            {
+                distance = temp;
+                closest = defender;
             }
         }
 
