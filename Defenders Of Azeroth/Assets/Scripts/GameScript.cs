@@ -30,8 +30,10 @@ public class GameScript : MonoBehaviour {
     private List<GameObject> spawnedDefenders = new List<GameObject>();
     private List<GameObject> spawnedEnemies = new List<GameObject>();
 
-    float elapsedTime = 0f;
-    float targetTime = 5f;
+    float elapsedTime = 15f;
+    float targetTime = 10f;
+    float bossSpawnTime = 40f;
+    float elapsedBossTime = 0f;
     public int nrCatapults = 0;
 
 	// Use this for initialization
@@ -42,12 +44,16 @@ public class GameScript : MonoBehaviour {
         enemyPrefabs[2] = enemy3Prefab;
         AudioListener.volume = 0.1f;
     }
-	
+
+    float enemyHPIncrease = 0.5f;
+
 	// Update is called once per frame
 	void Update () {
         // wave system
         {
             elapsedTime += Time.deltaTime;
+            elapsedBossTime += Time.deltaTime;
+            enemyHPIncrease += Time.deltaTime * enemyHPIncrease;
 
             if (elapsedTime >= targetTime)
             {
@@ -62,11 +68,29 @@ public class GameScript : MonoBehaviour {
                 for (int i = 0; i < numEnemiesToSpawn; i++)
                 {
                     GameObject enemy = Instantiate(enemyPrefabs[enemyToSpawn], spawnLocation.position - new Vector3(30 * i, 0, 0), enemy1Prefab.GetComponent<Transform>().rotation);
+                    enemy.GetComponentInChildren<EnemyController>().enemyMaxHealth += enemyHPIncrease;
+                    enemy.GetComponentInChildren<EnemyController>().enemyCurrentHealth = enemy.GetComponentInChildren<EnemyController>().enemyMaxHealth;
                     enemy.GetComponent<AIPath>().target = enemyTarget;
                     enemy.GetComponent<AIPath>().SearchPath();
 
                     spawnedEnemies.Add(enemy);
                 }
+            }
+
+            if (elapsedBossTime >= bossSpawnTime)
+            {
+
+                elapsedBossTime = 0f;
+
+                bool spawnUp = ((int)(Random.value * 100) % 2) == 1;
+                Transform spawnLocation = (spawnUp) ? enemySpawnPointUp : enemySpawnPointDown;
+                GameObject enemy = Instantiate(bossPrefab, spawnLocation.position, enemy1Prefab.GetComponent<Transform>().rotation);
+                enemy.GetComponentInChildren<EnemyController>().enemyMaxHealth += enemyHPIncrease;
+                enemy.GetComponentInChildren<EnemyController>().enemyCurrentHealth = enemy.GetComponentInChildren<EnemyController>().enemyMaxHealth;
+                enemy.GetComponent<AIPath>().target = enemyTarget;
+                enemy.GetComponent<AIPath>().SearchPath();
+
+                spawnedEnemies.Add(enemy);   
             }
         }
     }
@@ -102,7 +126,7 @@ public class GameScript : MonoBehaviour {
 
         foreach (GameObject enemy in spawnedEnemies) {
             float temp = Vector3.Distance(enemy.GetComponent<Transform>().position, position);
-            if (temp < distance && minRange <= temp)
+            if (temp <= distance && temp >= minRange)
             {
                 distance = temp;
                 closest = enemy;
@@ -120,7 +144,7 @@ public class GameScript : MonoBehaviour {
         foreach (GameObject defender in spawnedDefenders)
         {
             float temp = Vector3.Distance(defender.GetComponent<Transform>().position, position);
-            if (temp < distance && minRange <= temp)
+            if (temp < distance && temp >= minRange)
             {
                 distance = temp;
                 closest = defender;

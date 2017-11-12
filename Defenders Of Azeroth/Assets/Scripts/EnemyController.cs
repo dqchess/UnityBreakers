@@ -11,7 +11,7 @@ public class EnemyController : MonoBehaviour {
     private Vector3 animatorMovement;
 
     public float enemyHitDamage = 5f;
-    private float bossDamageReduction;
+    //private float bossDamageReduction;
     public float enemyMaxHealth = 100f;
     public float enemyCurrentHealth = 100f;
 

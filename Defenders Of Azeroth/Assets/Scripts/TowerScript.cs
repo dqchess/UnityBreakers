@@ -12,9 +12,9 @@ public class TowerScript : MonoBehaviour {
     private float timeLeft = 0f;
     private float timeout = 0f;
     private bool timerRunning = false;
-    public float bulletDamage = 10f;
+    public float bulletDamage = 100f;
     public float bulletRange = 300f;
-    private float fireFrequencySeconds = 1f;
+    private float fireFrequencySeconds = 0.3f;
     
 
     private float fireTimerElapsed = 0;
@@ -46,7 +46,6 @@ public class TowerScript : MonoBehaviour {
                 Vector3 direction = nearsestEnemy.GetComponent<Transform>().position - transform.position;
                 direction.Normalize();
                 bullet.velocity = direction * 500;
-                
             }
         }
 

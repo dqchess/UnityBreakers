@@ -458,7 +458,7 @@ MonoBehaviour:
   target: {fileID: 0}
   canSearch: 1
   canMove: 1
-  speed: 70
+  speed: 50
   rotationSpeed: 360
   slowdownDistance: 15
   pickNextWaypointDist: 40
@@ -477,6 +477,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movespeed: 1
   userDirection: {x: 1, y: 0, z: 0}
+  enemyHitDamage: 2
+  enemyMaxHealth: 300
+  enemyCurrentHealth: 300
 --- !u!114 &114908906100002984
 MonoBehaviour:
   m_ObjectHideFlags: 1

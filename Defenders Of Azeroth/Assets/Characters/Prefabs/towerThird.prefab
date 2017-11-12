@@ -245,7 +245,8 @@ MonoBehaviour:
   bulletRigidbody: {fileID: 50864155442956424, guid: 2dc23a1515d532a4990d99ec8b05c013,
     type: 2}
   healthBar: {fileID: 0}
-  bulletDamage: 10
+  bulletDamage: 60
+  bulletRange: 300
 --- !u!114 &114468535019352244
 MonoBehaviour:
   m_ObjectHideFlags: 1

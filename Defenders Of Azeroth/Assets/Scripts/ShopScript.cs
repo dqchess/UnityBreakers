@@ -10,7 +10,7 @@ public class ShopScript : MonoBehaviour {
     public GameObject currencyView;
     public GameObject scoreView;
 
-    private float currentCurrency = 200;
+    private float currentCurrency = 1000;
     private float currentScore = 0;
 
 	// Use this for initialization
