@@ -358,8 +358,8 @@ MonoBehaviour:
   bulletRigidbody: {fileID: 50029342046855590, guid: a8e52e7c0495a7d44b1f17e71a0635c4,
     type: 2}
   healthBar: {fileID: 1310290910548518}
-  bulletDamage: 10
-  bulletRange: 500
+  bulletDamage: 5
+  bulletRange: 700
 --- !u!212 &212251397853464306
 SpriteRenderer:
   m_ObjectHideFlags: 1
