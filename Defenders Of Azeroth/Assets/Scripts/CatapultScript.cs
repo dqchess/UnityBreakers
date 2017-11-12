@@ -13,10 +13,10 @@ public class CatapultScript : MonoBehaviour
     private float timeLeft = 0f;
     private float timeout = 0f;
     private bool timerRunning = false;
-    private float bulletDamage = 250f;
+    private float bulletDamage = 350f;
     private float bulletRange = 30000f;
     private float fireFrequencySeconds = 3f;
-    private float minRange = 200f;
+    private float minRange = 250f;
 
 
     private float fireTimerElapsed = 0;

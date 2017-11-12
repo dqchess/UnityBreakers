@@ -39,6 +39,7 @@ public class GameScript : MonoBehaviour {
         enemyPrefabs[0] = enemy1Prefab;
         enemyPrefabs[1] = enemy2Prefab;
         enemyPrefabs[2] = enemy3Prefab;
+        AudioListener.volume = 0.1f;
     }
 	
 	// Update is called once per frame
