@@ -17,6 +17,7 @@ public class GameScript : MonoBehaviour {
     public GameObject enemy1Prefab;
     public GameObject enemy2Prefab;
     public GameObject enemy3Prefab;
+    public GameObject bossPrefab;
 
     private List<GameObject> towerList = new List<GameObject>();
 
