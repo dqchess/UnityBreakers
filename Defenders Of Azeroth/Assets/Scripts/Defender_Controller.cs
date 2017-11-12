@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Defender_Controller : MonoBehaviour {
 
@@ -13,6 +14,9 @@ public class Defender_Controller : MonoBehaviour {
     private float elapsedTime = 0f;
     private float findEnemyTargetTime = 3f;
     public float damageAmount = 5f;
+
+    private float defenderMaxHealth = 120f;
+    public float defenderCurrentHealth = 120f;
 
     private Quaternion myRotation = Quaternion.identity;
 
@@ -106,6 +110,20 @@ public class Defender_Controller : MonoBehaviour {
             return;
 
         enemy.InflictDamage(damageAmount * Time.deltaTime);
+        InflictDamage(enemy.GetHitDamage() * Time.deltaTime);
+    }
+
+    public void InflictDamage(float damage)
+    {
+        defenderCurrentHealth -= damage;
+
+        if (defenderCurrentHealth <= 0)
+        {
+            defenderCurrentHealth = 0;
+            GameObject.Find("map1").GetComponent<GameScript>().NotifyDefenderDestroy(gameObject);
+        }
+
+        GetComponentInChildren<Slider>().value = defenderCurrentHealth * 100 / defenderMaxHealth;
     }
 
     public void NotifyEnemyDead(GameObject enemy)

@@ -1,11 +1,12 @@
 fileFormatVersion: 2
 guid: bde27a3abfeed33408de147159c958aa
-timeCreated: 1509644802
+timeCreated: 1510481354
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: towerSecond_0
     21300002: towerSecond_1
+    21300004: towerSecond_2
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -97,7 +98,7 @@ TextureImporter:
         width: 79
         height: 121
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -110,6 +111,20 @@ TextureImporter:
         y: 75
         width: 63
         height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: towerSecond_2
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 183
+        width: 81
+        height: 76
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
