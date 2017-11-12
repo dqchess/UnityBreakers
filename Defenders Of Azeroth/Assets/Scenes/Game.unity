@@ -139,7 +139,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 39370579}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -353, y: -231, z: 0}
+  m_LocalPosition: {x: -389, y: -230, z: 0}
   m_LocalScale: {x: 1.028428, y: 1.082556, z: 0}
   m_Children:
   - {fileID: 338918449}
@@ -148,7 +148,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -353, y: -231}
+  m_AnchoredPosition: {x: -389, y: -230}
   m_SizeDelta: {x: 75.93, y: 57.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &39370581
@@ -191,7 +191,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1716835437}
         m_MethodName: Upgrade_Towers_Range
         m_Mode: 1
         m_Arguments:
@@ -281,7 +281,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 194796573}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -665.8, y: -232.30002, z: 0}
+  m_LocalPosition: {x: -712, y: -231, z: 0}
   m_LocalScale: {x: 1.000003, y: 1.0000031, z: 0}
   m_Children:
   - {fileID: 575858446}
@@ -290,7 +290,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -665.8, y: -232.3}
+  m_AnchoredPosition: {x: -712, y: -231}
   m_SizeDelta: {x: 75.93, y: 57.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &194796575
@@ -784,7 +784,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 329730050}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -511.00003, y: -233, z: 0}
+  m_LocalPosition: {x: -550, y: -231, z: 0}
   m_LocalScale: {x: 1.028428, y: 1.082556, z: 0}
   m_Children:
   - {fileID: 1413662719}
@@ -793,7 +793,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -511, y: -233}
+  m_AnchoredPosition: {x: -550, y: -231}
   m_SizeDelta: {x: 75.93, y: 57.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &329730052
@@ -836,7 +836,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1716835437}
         m_MethodName: SpawnCatapult
         m_Mode: 1
         m_Arguments:
@@ -1685,7 +1685,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 954846339}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -816.7, y: -232, z: 0}
+  m_LocalPosition: {x: -870, y: -232, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
   - {fileID: 1367084550}
@@ -1694,7 +1694,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -816.7, y: -232}
+  m_AnchoredPosition: {x: -870, y: -232}
   m_SizeDelta: {x: 75.93, y: 57.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &954846341
@@ -1737,7 +1737,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1716835437}
         m_MethodName: SpawnDefender
         m_Mode: 1
         m_Arguments:
@@ -1812,7 +1812,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 956559866}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -898, y: -230, z: 0}
+  m_LocalPosition: {x: -947, y: -231, z: 0}
   m_LocalScale: {x: 1.028428, y: 1.082556, z: 0}
   m_Children:
   - {fileID: 976794970}
@@ -1821,7 +1821,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -898, y: -230}
+  m_AnchoredPosition: {x: -947, y: -231}
   m_SizeDelta: {x: 75.93, y: 57.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &956559868
@@ -1864,8 +1864,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: Upgrade_Defender_SpeedDamage
+      - m_Target: {fileID: 1716835437}
+        m_MethodName: Upgrade_Towers_Range
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1938,7 +1938,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 976794969}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.0000076293945, z: 0}
+  m_LocalPosition: {x: 0, y: -6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 956559867}
@@ -1946,7 +1946,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.0000078678}
+  m_AnchoredPosition: {x: 0, y: -6}
   m_SizeDelta: {x: 0, y: 7.95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &976794971
@@ -1971,21 +1971,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 11
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 7
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '+50% Defender Speed & Damage
-
-
-'
+  m_Text: "+50% \nDefender Speed & Damage\n\n"
 --- !u!222 &976794972
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2019,7 +2016,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 979566589}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.0000076293945, z: 0}
+  m_LocalPosition: {x: 0, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1767892042}
@@ -2027,7 +2024,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.0000078678}
+  m_AnchoredPosition: {x: 0, y: -5}
   m_SizeDelta: {x: 0, y: 7.95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &979566591
@@ -2052,18 +2049,20 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 110
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '-20% Reduce Enemy Speed & Damage
+  m_Text: '-20%
+
+    Reduce Enemy Speed & Damage
 
 '
 --- !u!222 &979566592
@@ -2725,7 +2724,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1537204801}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -435, y: -232, z: 0}
+  m_LocalPosition: {x: -467, y: -230, z: 0}
   m_LocalScale: {x: 1.028428, y: 1.082556, z: 0}
   m_Children:
   - {fileID: 2100641853}
@@ -2734,7 +2733,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -435, y: -232}
+  m_AnchoredPosition: {x: -467, y: -230}
   m_SizeDelta: {x: 75.93, y: 57.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1537204803
@@ -2777,7 +2776,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1716835437}
         m_MethodName: Upgrade_Towers_Damage
         m_Mode: 1
         m_Arguments:
@@ -2852,7 +2851,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1617797577}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -589.7, y: -232, z: 0}
+  m_LocalPosition: {x: -632, y: -231, z: 0}
   m_LocalScale: {x: 1.000003, y: 1.0000031, z: 0}
   m_Children:
   - {fileID: 1145364203}
@@ -2861,7 +2860,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -589.7, y: -232}
+  m_AnchoredPosition: {x: -632, y: -231}
   m_SizeDelta: {x: 75.93, y: 57.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1617797579
@@ -2985,7 +2984,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1688467219}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -741.2, y: -232.20001, z: 0}
+  m_LocalPosition: {x: -791, y: -232.20001, z: 0}
   m_LocalScale: {x: 1.000003, y: 1.0000031, z: 0}
   m_Children:
   - {fileID: 1775067147}
@@ -2994,7 +2993,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -741.2, y: -232.2}
+  m_AnchoredPosition: {x: -791, y: -232.2}
   m_SizeDelta: {x: 75.93, y: 57.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1688467221
@@ -3442,7 +3441,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1767892041}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -282, y: -228, z: 0}
+  m_LocalPosition: {x: -309, y: -230, z: 0}
   m_LocalScale: {x: 1.028428, y: 1.082556, z: 0}
   m_Children:
   - {fileID: 979566590}
@@ -3451,7 +3450,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -282, y: -228}
+  m_AnchoredPosition: {x: -309, y: -230}
   m_SizeDelta: {x: 75.93, y: 57.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1767892043
@@ -3494,7 +3493,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1716835437}
         m_MethodName: Upgrade_Enemy_ReduceSpeedDamage
         m_Mode: 1
         m_Arguments:
