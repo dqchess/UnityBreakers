@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class EnemyController : MonoBehaviour {
 
-    public int movespeed = 1;
+    public float movespeed = 1f;
     public Vector3 userDirection = Vector3.right;
     private Animator anim;
     private Vector3 animatorMovement;
 
     public float enemyHitDamage = 5f;
-    private float enemyMaxHealth = 100f;
+    private float bossDamageReduction;
+    public float enemyMaxHealth = 100f;
     public float enemyCurrentHealth = 100f;
 
     private Quaternion myRotation = Quaternion.identity;
@@ -93,9 +94,9 @@ public class EnemyController : MonoBehaviour {
         return enemyHitDamage;
     }
 
-    public void InflictDamage(float damage)
+    public void InflictDamage(float damage, float bossDamageReduction = 1)
     {
-        enemyCurrentHealth -= damage;
+        enemyCurrentHealth -= damage / bossDamageReduction;
 
         if (enemyCurrentHealth <= 0)
         {
