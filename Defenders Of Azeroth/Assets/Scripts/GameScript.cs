@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class GameScript : MonoBehaviour { 
 
     public GameObject towerPrefab;
@@ -79,12 +80,13 @@ public class GameScript : MonoBehaviour {
         }
 
         Destroy(enemy);
-
+  
         // Add currency and score
         ShopScript shop = GetComponent<ShopScript>();
 
         shop.AddScore(enemy.GetComponent<EnemyController>().GetMaxHealth());
         shop.AddCurrency(enemy.GetComponent<EnemyController>().GetMaxHealth());
+        PlayerPrefs.SetFloat("lastScore",shop.getScore());
     }
 
     public void NotifyDefenderDestroy(GameObject defender)
