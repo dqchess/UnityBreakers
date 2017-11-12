@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BaseScript : MonoBehaviour {
 
@@ -24,6 +25,7 @@ public class BaseScript : MonoBehaviour {
         if (GetComponentInChildren<Slider>().value == 0)
         {
             // TODO -> add transition to the end scene -> Scoreboard & stuff like that
+            SceneManager.LoadScene("Highscore");
             Debug.Log("GAME ENDED!");
             gameEnded = true;
         }

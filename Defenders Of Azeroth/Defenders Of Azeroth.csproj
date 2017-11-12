@@ -331,6 +331,7 @@
     <Compile Include="Assets\Scripts\EnemyController.cs" />
     <Compile Include="Assets\Scripts\EntityValue.cs" />
     <Compile Include="Assets\Scripts\GameScript.cs" />
+    <Compile Include="Assets\Scripts\HighScore.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\ShopScript.cs" />
     <Compile Include="Assets\Scripts\SpawnPointScript.cs" />

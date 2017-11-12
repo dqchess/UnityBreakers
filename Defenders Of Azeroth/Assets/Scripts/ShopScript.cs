@@ -45,4 +45,9 @@ public class ShopScript : MonoBehaviour {
     {
         currentScore += score;
     }
+
+    public float getScore()
+    {
+        return currentScore;
+    }
 }
