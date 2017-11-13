@@ -3138,7 +3138,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Catapult
 
-    600'
+    2000'
 --- !u!222 &1413662721
 CanvasRenderer:
   m_ObjectHideFlags: 0
