@@ -16,6 +16,11 @@ public class MainMenu : MonoBehaviour {
         if (SceneManager.GetActiveScene().name == "Game" && Input.GetKey("escape")) { 
             change_Scene("MainMenu");
         }
+
+        //if (SceneManager.GetActiveScene().name == "Highscore" && Input.GetKey("escape"))
+        //{
+        //    change_Scene("Highscore");
+        //}
     }
 
     public void change_Scene(string sceneName) {
