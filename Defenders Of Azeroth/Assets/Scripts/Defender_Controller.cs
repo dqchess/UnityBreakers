@@ -12,7 +12,7 @@ public class Defender_Controller : MonoBehaviour {
     private Vector3 animatorMovement;
 
     private float elapsedTime = 0f;
-    private float findEnemyTargetTime = 3f;
+    private float findEnemyTargetTime = 10f;
     public float damageAmount = 5f;
 
     private float defenderMaxHealth = 120f;
@@ -128,7 +128,9 @@ public class Defender_Controller : MonoBehaviour {
 
     public void NotifyEnemyDead(GameObject enemy)
     {
-        if (targetEnemy == enemy)
+        if (targetEnemy == enemy) { 
             targetEnemy = null;
+            Debug.Log("EnemyDead");
+        }
     }
 }

@@ -3184,6 +3184,12 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 114992650525592696, guid: a87ce088c383ffb4fb397939af31a0ab,
+        type: 2}
+      propertyPath: bulletRigidbody
+      value: 
+      objectReference: {fileID: 50099861451111026, guid: 5416b4bfca439024fb7179bf9c32157c,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a87ce088c383ffb4fb397939af31a0ab, type: 2}
   m_IsPrefabParent: 0
@@ -3882,15 +3888,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerPrefab: {fileID: 1383836197263940, guid: 005685f7f95a6df499ec51573d68ac56,
     type: 2}
-  defenderPrefab: {fileID: 1733620584524720, guid: 5f3b85ceb6d84ef4583350f78708e362,
+  defenderPrefab: {fileID: 1733620584524720, guid: 4cbe936b0931d304eacc165798194186,
     type: 2}
   catapultPrefab: {fileID: 1461600158145848, guid: 49f2555e2a7444d4ea83f0863b409fe3,
     type: 2}
-  enemy1Prefab: {fileID: 1688794503112336, guid: 561d926690bc0374797f012d4947f936,
+  enemy1Prefab: {fileID: 1688794503112336, guid: aa1271909dd4ce242b6adefd215b2721,
     type: 2}
-  enemy2Prefab: {fileID: 1390157558271486, guid: cec10c2d3005ec04d91cd02368298ba7,
+  enemy2Prefab: {fileID: 1390157558271486, guid: b5b1708cd1008b746bd8bd152a720748,
     type: 2}
-  enemy3Prefab: {fileID: 1159982102947988, guid: 92344f4ced65cc041a024097fa94b380,
+  enemy3Prefab: {fileID: 1159982102947988, guid: 12a5f3aa8b09bc147b1e7eeaa78715cd,
     type: 2}
   bossPrefab: {fileID: 1596811456592340, guid: cf699e6b3486f8e4ab6230cb6c72c556, type: 2}
   enemySpawnPointUp: {fileID: 1635900928}

@@ -308,8 +308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5e1ebb4fbac54849bc7c56a7875f76d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 5
-  defenderHitDamage: 5
+  damageAmount: 15
   defenderCurrentHealth: 100
 --- !u!114 &114224278969214706
 MonoBehaviour:
