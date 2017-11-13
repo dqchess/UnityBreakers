@@ -61,6 +61,8 @@ public class CatapultScript : MonoBehaviour
                 timeLeft = 0;
                 timerRunning = false;
                 GameObject.Find("map1").GetComponent<GameScript>().nrCatapults--;
+
+                // TODO BUG HERE
                 spawnPoint.NotifyTowerDestroy();
             }
 

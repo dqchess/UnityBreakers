@@ -107,15 +107,14 @@ public class GameScript : MonoBehaviour {
         {
             e.GetComponentInChildren<Defender_Controller>().NotifyEnemyDead(enemy);
         }
-
-        Destroy(enemy);
-  
         // Add currency and score
         ShopScript shop = GetComponent<ShopScript>();
 
-        shop.AddScore(enemy.GetComponent<EnemyController>().GetMaxHealth());
-        shop.AddCurrency(enemy.GetComponent<EnemyController>().GetMaxHealth());
+        shop.AddScore(enemy.GetComponentInChildren<EnemyController>().GetMaxHealth());
+        shop.AddCurrency(enemy.GetComponentInChildren<EnemyController>().GetMaxHealth());
         PlayerPrefs.SetFloat("lastScore",shop.getScore());
+
+        Destroy(enemy);
     }
 
     public void NotifyDefenderDestroy(GameObject defender)
@@ -186,13 +185,13 @@ public class GameScript : MonoBehaviour {
             //GameObject catapult = Instantiate(catapultPrefab, location, catapultPrefab.GetComponent<Transform>().rotation);
             GameObject catapult = Instantiate(catapultPrefab, location, Quaternion.identity);
 
-            spawnedDefenders.Add(catapult);
+            //spawnedDefenders.Add(catapult);
         }
         if (nrCatapults == 2)
         {
             Vector3 location = GameObject.Find("mainBase").GetComponent<Transform>().position - new Vector3(-35, -120, 0);
             GameObject catapult = Instantiate(catapultPrefab, location, Quaternion.identity);
-            spawnedDefenders.Add(catapult);
+            //spawnedDefenders.Add(catapult);
         }    
     }
     public void AddTower(GameObject tower)
