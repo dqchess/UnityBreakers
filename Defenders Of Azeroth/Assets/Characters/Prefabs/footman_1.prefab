@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 60302155223904168}
   m_Layer: 0
   m_Name: footman_1
-  m_TagString: NoBulletCollision
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 114462533163173958}
   m_Layer: 0
   m_Name: footman_1
-  m_TagString: NoBulletCollision
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

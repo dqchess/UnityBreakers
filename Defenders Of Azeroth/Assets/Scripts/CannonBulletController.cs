@@ -43,9 +43,10 @@ public class CannonBulletController : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Defender_Controller defender = collision.gameObject.GetComponentInChildren<Defender_Controller>();
-
+        
         if (!defender)
             return;
+
 
         defender.InflictDamage(damageAmount);
         Destroy(gameObject);
