@@ -30,12 +30,14 @@ public class GameScript : MonoBehaviour {
 
     private List<GameObject> spawnedDefenders = new List<GameObject>();
     private List<GameObject> spawnedEnemies = new List<GameObject>();
+    private List<GameObject> catapults = new List<GameObject>();
 
     float elapsedTime = 15f;
     float targetTime = 10f;
     float bossSpawnTime = 40f;
     float elapsedBossTime = 0f;
     public int nrCatapults = 0;
+    int currentCatapult = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -179,19 +181,17 @@ public class GameScript : MonoBehaviour {
             return;
 
         nrCatapults++;
-        if (nrCatapults == 1);
+        currentCatapult++;
+        if (currentCatapult % 2 == 1)
         {
             Vector3 location = GameObject.Find("mainBase").GetComponent<Transform>().position - new Vector3(-35, 120,0);
             //GameObject catapult = Instantiate(catapultPrefab, location, catapultPrefab.GetComponent<Transform>().rotation);
             GameObject catapult = Instantiate(catapultPrefab, location, Quaternion.identity);
-
-            //spawnedDefenders.Add(catapult);
         }
-        if (nrCatapults == 2)
+        if (currentCatapult % 2 == 0)
         {
             Vector3 location = GameObject.Find("mainBase").GetComponent<Transform>().position - new Vector3(-35, -120, 0);
             GameObject catapult = Instantiate(catapultPrefab, location, Quaternion.identity);
-            //spawnedDefenders.Add(catapult);
         }    
     }
     public void AddTower(GameObject tower)
@@ -248,6 +248,13 @@ public class GameScript : MonoBehaviour {
                 enemy.GetComponentInChildren<EnemyController>().enemyHitDamage -= enemy.GetComponentInChildren<EnemyController>().enemyHitDamage * 0.2f;
             }
         }
+    }
+
+    public void NotifyCatapultDestroy(GameObject catapult)
+    {
+        nrCatapults--;
+        catapults.Remove(catapult);
+        Destroy(catapult);
     }
 
     //public void Upgrade_Enemy_SuddenDeath()
