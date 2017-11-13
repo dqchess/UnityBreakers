@@ -101,12 +101,15 @@ public class EnemyController : MonoBehaviour {
         if (enemyCurrentHealth <= 0)
         {
             enemyCurrentHealth = 0;
-
-            // notify the wave generation script that this particular enemy should be destroyed
-            GameObject.Find("map1").GetComponent<GameScript>().NotifyEnemyDestroy(gameObject);
         }
 
         GetComponentInChildren<Slider>().value = enemyCurrentHealth * 100 / enemyMaxHealth;
+
+        if (enemyCurrentHealth <= 0)
+        {
+            // notify the wave generation script that this particular enemy should be destroyed
+            GameObject.Find("map1").GetComponent<GameScript>().NotifyEnemyDestroy(gameObject.transform.parent.gameObject);
+        }
     }
 
     // TODO this should be used in GameScript -> wave generation

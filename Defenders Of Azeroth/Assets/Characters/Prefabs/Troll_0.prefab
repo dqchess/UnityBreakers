@@ -533,8 +533,8 @@ MonoBehaviour:
   movespeed: 10
   userDirection: {x: 1, y: 0, z: 0}
   enemyHitDamage: 3
-  enemyMaxHealth: 200
-  enemyCurrentHealth: 200
+  enemyMaxHealth: 150
+  enemyCurrentHealth: 150
 --- !u!212 &212303038104518926
 SpriteRenderer:
   m_ObjectHideFlags: 1

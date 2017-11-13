@@ -46,7 +46,8 @@ public class GameScript : MonoBehaviour {
         AudioListener.volume = 0.1f;
     }
 
-    float enemyHPIncrease = 0.5f;
+    float enemyHPIncrease = 0.0f;
+    float bossHPIncrease = 0.0f;
 
 	// Update is called once per frame
 	void Update () {
@@ -54,8 +55,7 @@ public class GameScript : MonoBehaviour {
         {
             elapsedTime += Time.deltaTime;
             elapsedBossTime += Time.deltaTime;
-            enemyHPIncrease += Time.deltaTime * enemyHPIncrease;
-
+            
             if (elapsedTime >= targetTime)
             {
                 elapsedTime = 0;
@@ -75,23 +75,26 @@ public class GameScript : MonoBehaviour {
                     enemy.GetComponent<AIPath>().SearchPath();
 
                     spawnedEnemies.Add(enemy);
+
+                    enemyHPIncrease += 5;
                 }
             }
 
             if (elapsedBossTime >= bossSpawnTime)
             {
-
                 elapsedBossTime = 0f;
 
                 bool spawnUp = ((int)(Random.value * 100) % 2) == 1;
                 Transform spawnLocation = (spawnUp) ? enemySpawnPointUp : enemySpawnPointDown;
                 GameObject enemy = Instantiate(bossPrefab, spawnLocation.position, enemy1Prefab.GetComponent<Transform>().rotation);
-                enemy.GetComponentInChildren<EnemyController>().enemyMaxHealth += enemyHPIncrease;
+                enemy.GetComponentInChildren<EnemyController>().enemyMaxHealth += bossHPIncrease;
                 enemy.GetComponentInChildren<EnemyController>().enemyCurrentHealth = enemy.GetComponentInChildren<EnemyController>().enemyMaxHealth;
                 enemy.GetComponent<AIPath>().target = enemyTarget;
                 enemy.GetComponent<AIPath>().SearchPath();
 
-                spawnedEnemies.Add(enemy);   
+                spawnedEnemies.Add(enemy);
+
+                bossHPIncrease += 10;
             }
         }
     }
