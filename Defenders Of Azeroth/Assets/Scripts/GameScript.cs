@@ -170,8 +170,14 @@ public class GameScript : MonoBehaviour {
 
     public void SpawnCatapult()
     {
+        if (nrCatapults == 2)
+            return;
+
+        if (!GameObject.Find("map1").GetComponent<ShopScript>().DecreaseCurrency(catapultPrefab.GetComponent<EntityValue>().selfValue))
+            return;
+
         nrCatapults++;
-        if (nrCatapults == 1)
+        if (nrCatapults == 1);
         {
             Vector3 location = GameObject.Find("mainBase").GetComponent<Transform>().position - new Vector3(-35, 120,0);
             //GameObject catapult = Instantiate(catapultPrefab, location, catapultPrefab.GetComponent<Transform>().rotation);

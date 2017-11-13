@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: 114063255151829402}
   - component: {fileID: 50845309191846240}
   - component: {fileID: 61228771037255400}
+  - component: {fileID: 114947848496169012}
   m_Layer: 0
   m_Name: Catapult
   m_TagString: Untagged
@@ -436,6 +437,18 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 20s
+--- !u!114 &114947848496169012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1461600158145848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0317885bbe0603344b65879a3852d2a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selfValue: 600
 --- !u!114 &114972876772291430
 MonoBehaviour:
   m_ObjectHideFlags: 1
