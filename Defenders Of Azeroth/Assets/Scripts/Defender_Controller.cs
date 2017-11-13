@@ -120,7 +120,7 @@ public class Defender_Controller : MonoBehaviour {
         if (defenderCurrentHealth <= 0)
         {
             defenderCurrentHealth = 0;
-            GameObject.Find("map1").GetComponent<GameScript>().NotifyDefenderDestroy(gameObject);
+            GameObject.Find("map1").GetComponent<GameScript>().NotifyDefenderDestroy(transform.parent.gameObject);
         }
 
         GetComponentInChildren<Slider>().value = defenderCurrentHealth * 100 / defenderMaxHealth;
