@@ -32,8 +32,8 @@ public class GameScript : MonoBehaviour {
     private List<GameObject> spawnedEnemies = new List<GameObject>();
     private List<GameObject> catapults = new List<GameObject>();
 
-    float elapsedTime = 15f;
-    float targetTime = 10f;
+    float elapsedTime = 5f;
+    float targetTime = 5f;
     float bossSpawnTime = 40f;
     float elapsedBossTime = 0f;
     public int nrCatapults = 0;

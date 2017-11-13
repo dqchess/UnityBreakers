@@ -390,7 +390,7 @@ MonoBehaviour:
   movespeed: 1
   userDirection: {x: 1, y: 0, z: 0}
   enemyHitDamage: 45
-  enemyMaxHealth: 100
+  enemyMaxHealth: 2000
   enemyCurrentHealth: 2000
 --- !u!114 &114395848670737366
 MonoBehaviour:
