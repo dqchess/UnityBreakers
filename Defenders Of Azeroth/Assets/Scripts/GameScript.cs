@@ -204,35 +204,47 @@ public class GameScript : MonoBehaviour {
 
     public void Upgrade_Towers_Damage ()
     {
-        foreach (var tower in towerList)
+        if (GameObject.Find("map1").GetComponent<ShopScript>().DecreaseCurrency(1000))
         {
-            tower.GetComponentInChildren<TowerScript>().bulletDamage = tower.GetComponentInChildren<TowerScript>().bulletDamage * 1.5f;
+            foreach (var tower in towerList)
+            {
+                tower.GetComponentInChildren<TowerScript>().bulletDamage = tower.GetComponentInChildren<TowerScript>().bulletDamage * 1.5f;
+            }
         }
     }
     public void Upgrade_Towers_Range()
     {
-        foreach (var tower in towerList)
+        if (GameObject.Find("map1").GetComponent<ShopScript>().DecreaseCurrency(1200))
         {
-            tower.GetComponentInChildren<TowerScript>().bulletRange = tower.GetComponentInChildren<TowerScript>().bulletRange * 1.5f;
+            foreach (var tower in towerList)
+            {
+                tower.GetComponentInChildren<TowerScript>().bulletRange = tower.GetComponentInChildren<TowerScript>().bulletRange * 1.5f;
 
+            }
         }
     }
 
     public void Upgrade_Defender_SpeedDamage()
     {
-        foreach (var defender in spawnedDefenders)
+        if (GameObject.Find("map1").GetComponent<ShopScript>().DecreaseCurrency(2000))
         {
-            defender.GetComponent<AIPath>().speed = defender.GetComponent<AIPath>().speed * 1.5f;
-            defender.GetComponentInChildren<Defender_Controller>().damageAmount = defender.GetComponentInChildren<Defender_Controller>().damageAmount * 1.5f;
+            foreach (var defender in spawnedDefenders)
+            {
+                defender.GetComponent<AIPath>().speed = defender.GetComponent<AIPath>().speed * 1.5f;
+                defender.GetComponentInChildren<Defender_Controller>().damageAmount = defender.GetComponentInChildren<Defender_Controller>().damageAmount * 1.5f;
+            }
         }
     }
 
     public void Upgrade_Enemy_ReduceSpeedDamage()
     {
-        foreach (var enemy in spawnedEnemies)
+        if (GameObject.Find("map1").GetComponent<ShopScript>().DecreaseCurrency(1500))
         {
-            enemy.GetComponent<AIPath>().speed -= enemy.GetComponent<AIPath>().speed * 0.2f;
-            enemy.GetComponentInChildren<EnemyController>().enemyHitDamage -= enemy.GetComponentInChildren<EnemyController>().enemyHitDamage * 0.2f;
+            foreach (var enemy in spawnedEnemies)
+            {
+                enemy.GetComponent<AIPath>().speed -= enemy.GetComponent<AIPath>().speed * 0.2f;
+                enemy.GetComponentInChildren<EnemyController>().enemyHitDamage -= enemy.GetComponentInChildren<EnemyController>().enemyHitDamage * 0.2f;
+            }
         }
     }
 

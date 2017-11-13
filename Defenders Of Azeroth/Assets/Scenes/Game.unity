@@ -1011,10 +1011,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 11
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1022,7 +1022,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: +50% Tower Range
+  m_Text: '+50%
+
+    Tower Range
+
+    1200'
 --- !u!222 &338918451
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2298,15 +2302,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 976794969}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.9749985, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -8.399998, z: 0}
+  m_LocalScale: {x: 0.8717157, y: 0.87171584, z: 0.87171584}
   m_Children: []
   m_Father: {fileID: 956559867}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -3.9750023}
+  m_AnchoredPosition: {x: 0, y: -8.4}
   m_SizeDelta: {x: 0, y: 7.95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &976794971
@@ -2342,7 +2346,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '+50% Defender Speed& Damage
+  m_Text: '+50% Defender S&D
+
+    2000
 
 
 '
@@ -2380,7 +2386,7 @@ RectTransform:
   m_GameObject: {fileID: 979566589}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9101587, y: 0.91015863, z: 0.91015863}
   m_Children: []
   m_Father: {fileID: 1767892042}
   m_RootOrder: 0
@@ -2417,7 +2423,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 110
-    m_Alignment: 4
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -2427,7 +2433,7 @@ MonoBehaviour:
 
     Reduce Enemy Speed & Damage
 
-'
+    1500'
 --- !u!222 &979566592
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4525,16 +4531,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2100641852}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.0017738342, y: -0.009426117, z: 0}
+  m_LocalScale: {x: 0.91, y: 0.90999997, z: 0.90999997}
   m_Children: []
   m_Father: {fileID: 1537204802}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.062000003}
+  m_AnchorMax: {x: 0.9215928, y: 1}
+  m_AnchoredPosition: {x: 2.9420419, y: -1.7764255}
+  m_SizeDelta: {x: 5.8840837, y: 3.552851}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2100641854
 MonoBehaviour:
@@ -4558,18 +4564,22 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 11
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 7
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '+ 50% Tower Damage
+  m_Text: '+50%
+
+    Tower Damage
+
+    1000
 
 '
 --- !u!222 &2100641855
